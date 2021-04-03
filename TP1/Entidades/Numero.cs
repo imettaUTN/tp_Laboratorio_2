@@ -28,54 +28,46 @@ namespace Entidades
         {
             set { numero = ValidarNumero(value); }
         }
-        public  string BinarioDecimal(string strBinario)
+        public string DecimalBinario(string strNumero)
         {
-            double numeroBinario = 0; ;
-            if (!EsBinario(strBinario))
+            return DecimalBinario(double.Parse(strNumero));
+        }
+        public string BinarioDecimal(string numero)
+        {
+            if(!EsBinario(numero))
             {
                 return "Valor Invalido";
             }
-            numeroBinario = Math.Abs(int.Parse(strBinario));
+            int numeroBinario = int.Parse(numero);
+            int numeroDecimal = 0;
+            int baseCalculo = 1;
 
-            int numero = 0;
-            int cociente = 0;
-            const int baseAConvertir = 10;
-
-            for (double resto = numeroBinario, exponente = 0; resto > 0; resto /= baseAConvertir, exponente++)
+            while (numeroBinario > 0)
             {
-                cociente = (int)resto % baseAConvertir;
-                //validacion extra, se supone que si no es binario paso la primer validacion
-                if (cociente != 1 && cociente != 0)
+                int resto = numeroBinario % 10;
+                numeroBinario = numeroBinario / 10;
+                numeroDecimal += resto * baseCalculo;
+                baseCalculo = baseCalculo * 2;
+            }
+        
+            return numeroDecimal.ToString();
+        }
+        public string DecimalBinario(double numero)
+        {
+            numero = Convert.ToInt32(numero);
+            String cadena = "";
+            if (numero == 0) { return "0"; }
+            if (numero > 0)
+            {
+                while (numero > 0)
                 {
-                    return "Valor Invalido";
+                    cadena += (numero % 2 == 0) ?"0": "1";
+                    numero = (int)(numero / 2);
                 }
-                numero += cociente * (int)Math.Pow(2, exponente);
             }
-
-            return numero.ToString();
-        }
-        public  string DecimalBinario(string numero)
-        {
-            double numeroAConvertir;
-            if (!double.TryParse(numero, out numeroAConvertir))
-            {
-                return "Valor Invalido";
-            }
-            return DecimalBinario(numeroAConvertir);
-        }
-        public  string DecimalBinario(double numero)
-        {
-            int binario = 0;
-            int numeroAConvertir = Convert.ToInt32(Math.Abs(numero));
-            const int baseAConvertir = 2;
-            int cociente = 0;
-
-            for (int resto = numeroAConvertir % baseAConvertir, exponente = 0; numero > 0; numero /= baseAConvertir, resto = Convert.ToInt32(numero % baseAConvertir), exponente++)
-            {
-                cociente = resto % baseAConvertir;
-                binario += cociente * (int)Math.Pow(10, exponente);
-            }
-            return binario.ToString();
+            char[] aux = cadena.ToCharArray();
+             Array.Reverse(aux);
+            return new string(aux);
         }
         private bool EsBinario(string binario)
         {
