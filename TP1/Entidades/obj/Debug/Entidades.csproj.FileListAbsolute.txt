@@ -3,3 +3,10 @@ C:\Users\IMetta\source\repos\TP1\Entidades\bin\Debug\Entidades.pdb
 C:\Users\IMetta\source\repos\TP1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\IMetta\source\repos\TP1\Entidades\obj\Debug\Entidades.dll
 C:\Users\IMetta\source\repos\TP1\Entidades\obj\Debug\Entidades.pdb
+C:\Users\IMetta\source\repos\TP1\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\git\tp_Laboratorio_2\TP1\Entidades\bin\Debug\Entidades.dll
+C:\git\tp_Laboratorio_2\TP1\Entidades\bin\Debug\Entidades.pdb
+C:\git\tp_Laboratorio_2\TP1\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\git\tp_Laboratorio_2\TP1\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\git\tp_Laboratorio_2\TP1\Entidades\obj\Debug\Entidades.dll
+C:\git\tp_Laboratorio_2\TP1\Entidades\obj\Debug\Entidades.pdb

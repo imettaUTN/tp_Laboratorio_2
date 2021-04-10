@@ -11,3 +11,16 @@ C:\Users\IMetta\source\repos\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.Co
 C:\Users\IMetta\source\repos\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
 C:\Users\IMetta\source\repos\TP1\MiCalculadora\obj\Debug\MiCalculadora.exe
 C:\Users\IMetta\source\repos\TP1\MiCalculadora\obj\Debug\MiCalculadora.pdb
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\bin\Debug\MiCalculadora.exe.config
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\bin\Debug\MiCalculadora.exe
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\bin\Debug\MiCalculadora.pdb
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\bin\Debug\Entidades.dll
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\bin\Debug\Entidades.pdb
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csprojAssemblyReference.cache
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.FormCalculadora.resources
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.Properties.Resources.resources
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.GenerateResource.cache
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CoreCompileInputs.cache
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.csproj.CopyComplete
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.exe
+C:\git\tp_Laboratorio_2\TP1\MiCalculadora\obj\Debug\MiCalculadora.pdb

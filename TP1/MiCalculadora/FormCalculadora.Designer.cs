@@ -143,8 +143,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCalculadora";
-            this.Text = "FormCalculadora";
-            this.Load += new System.EventHandler(this.FormCalculadora_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Calculadora de Ivan Metta 2°D";
             this.ResumeLayout(false);
             this.PerformLayout();
 

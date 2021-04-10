@@ -39,7 +39,7 @@ namespace MiCalculadora
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
             Numero nroResultado = new Numero();
-            lblResultado.Text = nroResultado.DecimalBinario(double.Parse(lblResultado.Text));
+            lblResultado.Text = nroResultado.DecimalBinario(lblResultado.Text);
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
@@ -55,11 +55,6 @@ namespace MiCalculadora
             n2.SetNumero = numero2;
 
             return Calculadora.Operar(n1, n2, operador);
-        }
-
-        private void FormCalculadora_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
