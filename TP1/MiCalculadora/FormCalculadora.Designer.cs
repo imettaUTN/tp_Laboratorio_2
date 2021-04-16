@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtNumero1 = new System.Windows.Forms.TextBox();
             this.cmbOperador = new System.Windows.Forms.ComboBox();
             this.txtNumero2 = new System.Windows.Forms.TextBox();
@@ -37,6 +38,7 @@
             this.btnOperar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.tlTipMensaje = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // txtNumero1
@@ -161,5 +163,6 @@
         private System.Windows.Forms.Button btnOperar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.ToolTip tlTipMensaje;
     }
 }

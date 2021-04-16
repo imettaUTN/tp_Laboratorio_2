@@ -40,12 +40,14 @@ namespace MiCalculadora
         {
             Numero nroResultado = new Numero();
             lblResultado.Text = nroResultado.DecimalBinario(lblResultado.Text);
+            btnOperar.Enabled = false;
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             Numero nroResultado = new Numero();
             lblResultado.Text = nroResultado.BinarioDecimal(lblResultado.Text);
+            btnOperar.Enabled = true;
         }
         private double Operar(string numero1, string numero2, string operador)
         {
@@ -56,5 +58,6 @@ namespace MiCalculadora
 
             return Calculadora.Operar(n1, n2, operador);
         }
+
     }
 }

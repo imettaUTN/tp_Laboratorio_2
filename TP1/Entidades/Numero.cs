@@ -30,7 +30,8 @@ namespace Entidades
         /// <param name="numero" type ="String">Parametro Numero</param>
         public Numero(string numero)
         {
-            this.numero = CambiarCulturaNumero(numero);
+            var culture = new CultureInfo("en-US");
+            this.numero = Double.Parse(numero.Replace(",", "."), culture.NumberFormat);
         }
 
         /// <summary>
@@ -47,7 +48,12 @@ namespace Entidades
         /// <returns>Numero decimal convertido a binario, en caso de error indica "Valor invalido" </returns>
         public string DecimalBinario(string strNumero)
         {
-            return DecimalBinario(CambiarCulturaNumero(strNumero));
+            if(string.IsNullOrEmpty(strNumero))
+            {
+                return "Valor Invalido";
+            }
+            var culture = new CultureInfo("en-US");
+            return DecimalBinario(Double.Parse(strNumero.Replace(",", "."), culture.NumberFormat));
         }
         /// <summary>
         /// Convierte un numero binario a decimal
@@ -174,20 +180,10 @@ namespace Entidades
             {
                 return 0;
             }
-            return CambiarCulturaNumero(strNumero);
-        }
 
-        /// <summary>
-        // Parsea un numero en formato string utilizando la cultura en-US para que SIEMPRE 
-        // use el . como separador de decimales. De esta manera no depende de la cultura instalada en cada usuario que prueba.
-        /// </summary>
-        /// <param name="strNumero">Numero en formato string</param>
-        /// <returns>Numero en formato double con la cultura en-US</returns>
-        private double CambiarCulturaNumero(string strNumero)
-        {
-            // en caso que el separado de decimales sea , lo cambio a . para hacerlo homologo a la cultura en-US
             var culture = new CultureInfo("en-US");
             return Double.Parse(strNumero.Replace(",", "."), culture.NumberFormat);
         }
+
     }
 }
