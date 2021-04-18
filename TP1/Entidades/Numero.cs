@@ -30,6 +30,8 @@ namespace Entidades
         /// <param name="numero" type ="String">Parametro Numero</param>
         public Numero(string numero)
         {
+            //Como nose que seperador de decimales tomo "," o ".", ya que depende de la cultura instalada
+            // estandarizo todas las conversiones a la misma cultura y evito problemas de conversion.
             var culture = new CultureInfo("en-US");
             this.numero = Double.Parse(numero.Replace(",", "."), culture.NumberFormat);
         }
@@ -52,6 +54,8 @@ namespace Entidades
             {
                 return "Valor Invalido";
             }
+            //Como nose que seperador de decimales tomo "," o ".", ya que depende de la cultura instalada
+            // estandarizo todas las conversiones a la misma cultura y evito problemas de conversion.
             var culture = new CultureInfo("en-US");
             return DecimalBinario(Double.Parse(strNumero.Replace(",", "."), culture.NumberFormat));
         }
@@ -180,7 +184,8 @@ namespace Entidades
             {
                 return 0;
             }
-
+            //Como nose que seperador de decimales tomo "," o ".", ya que depende de la cultura instalada
+            // estandarizo todas las conversiones a la misma cultura y evito problemas de conversion.
             var culture = new CultureInfo("en-US");
             return Double.Parse(strNumero.Replace(",", "."), culture.NumberFormat);
         }

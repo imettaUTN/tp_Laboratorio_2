@@ -9,20 +9,22 @@ namespace Entidades
     public static class Calculadora
     {
         /// <summary>
-        /// Dado un operador matematico indica si es valido o no
+        /// Dado un operador matematico devuelve un operador valido
         /// </summary>
         /// <param name="operador"> Operador </param>
         /// <returns>En caso de operador valido, el mismo operador, sino + </returns>
-        private static string ValidarOperador(string operador)
+        private static string ValidarOperador(char operador)
         {
+            //lo hago con un switch para validar los operadores validos +/*-
             switch (operador)
             {
-                case "+": return "+";
-                case "-": return "-";
-                case "/": return "/";
-                case "*": return "*";
+                case '+': return "+";
+                case '-': return "-";
+                case '/': return "/";
+                case '*': return "*";
+                default: return "+";
             }
-            return "+";
+            
         }
         /// <summary>
         /// Realiza la operacion entre los dos operandos y el operador, validando el operador.
@@ -34,7 +36,14 @@ namespace Entidades
         public static double Operar(Numero num1, Numero num2, string operador)
         {
             string operacionARealizar = string.Empty;
-            operacionARealizar = ValidarOperador(operador);
+            char operacionValidaAHacer = new char();
+
+            operacionValidaAHacer = Convert.ToChar(operador);
+            if (string.IsNullOrEmpty(operador))
+            {
+                operacionARealizar = ValidarOperador(operacionValidaAHacer);
+            }
+
             double resultado = 0;
             switch(operador)
             {
