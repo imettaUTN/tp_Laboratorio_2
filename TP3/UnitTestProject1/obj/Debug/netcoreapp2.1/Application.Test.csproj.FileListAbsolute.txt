@@ -1,0 +1,14 @@
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Application.Test.deps.json
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Application.Test.runtimeconfig.json
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Application.Test.runtimeconfig.dev.json
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Application.Test.dll
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\bin\Debug\netcoreapp2.1\Application.Test.pdb
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\obj\Debug\netcoreapp2.1\Application.Test.csprojAssemblyReference.cache
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\obj\Debug\netcoreapp2.1\Application.Test.csproj.CoreCompileInputs.cache
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\obj\Debug\netcoreapp2.1\Application.Test.AssemblyInfoInputs.cache
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\obj\Debug\netcoreapp2.1\Application.Test.AssemblyInfo.cs
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\obj\Debug\netcoreapp2.1\Application.Test.dll
+C:\Users\IMetta\source\repos\TP3\UnitTestProject1\obj\Debug\netcoreapp2.1\Application.Test.pdb

@@ -1,0 +1,6 @@
+C:\Users\IMetta\source\repos\TP3\Application.File\bin\Debug\Application.File.dll
+C:\Users\IMetta\source\repos\TP3\Application.File\bin\Debug\Application.File.pdb
+C:\Users\IMetta\source\repos\TP3\Application.File\obj\Debug\Application.File.csprojAssemblyReference.cache
+C:\Users\IMetta\source\repos\TP3\Application.File\obj\Debug\Application.File.csproj.CoreCompileInputs.cache
+C:\Users\IMetta\source\repos\TP3\Application.File\obj\Debug\Application.File.dll
+C:\Users\IMetta\source\repos\TP3\Application.File\obj\Debug\Application.File.pdb

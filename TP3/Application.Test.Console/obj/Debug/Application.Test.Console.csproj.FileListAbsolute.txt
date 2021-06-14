@@ -1,0 +1,12 @@
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\bin\Debug\Application.Test.Console.exe.config
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\bin\Debug\Application.Test.Console.exe
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\bin\Debug\Application.Test.Console.pdb
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\bin\Debug\Application.Models.dll
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\bin\Debug\Application.File.dll
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\bin\Debug\Application.Models.pdb
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\bin\Debug\Application.File.pdb
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\obj\Debug\Application.Test.Console.csprojAssemblyReference.cache
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\obj\Debug\Application.Test.Console.csproj.CoreCompileInputs.cache
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\obj\Debug\Application.Test.Console.csproj.CopyComplete
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\obj\Debug\Application.Test.Console.exe
+C:\Users\IMetta\source\repos\TP3\Application.Test.Console\obj\Debug\Application.Test.Console.pdb
