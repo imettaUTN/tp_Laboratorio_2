@@ -44,11 +44,6 @@ namespace Application.Models
             MateriaPrima mp;
             FXml<MateriaPrima> xml =new FXml<MateriaPrima>();
             string file = ConfigurationManager.AppSettings["ArchivoMateriaPrima"];
-            //nose porque el united test no te toma el config
-            if (file is null)
-            {
-                file = "MateriaPrima.xml";
-            }
             xml.Read(file,out mp);
             return mp;
         }
@@ -65,11 +60,6 @@ namespace Application.Models
                 throw new Exception("Materia prima no puede ser nula");
             }
             string file = ConfigurationManager.AppSettings["ArchivoMateriaPrima"];
-            //nose porque el united test no te toma el config
-            if (file is null)
-            {
-                file = "MateriaPrima.xml";
-            }
             xml.Save(file,  mp);
             return true;
         }

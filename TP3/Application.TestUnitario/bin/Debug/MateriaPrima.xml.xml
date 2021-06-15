@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MateriaPrima xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <IdMateriaPrima>93</IdMateriaPrima>
+  <Descripcion>mp 1</Descripcion>
+  <IdTanque>255</IdTanque>
+  <HabilitadoParaFabrica>false</HabilitadoParaFabrica>
+  <IdTampo>588</IdTampo>
+  <IndiceAcidez>1.25</IndiceAcidez>
+  <IdCertificado>93</IdCertificado>
+  <LegajoTecnicoHabilitante>889988</LegajoTecnicoHabilitante>
+</MateriaPrima>
