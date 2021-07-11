@@ -1,0 +1,6 @@
+C:\Users\IMetta\source\repos\TP3\Application.UIModels\bin\Debug\Application.UIModels.dll
+C:\Users\IMetta\source\repos\TP3\Application.UIModels\bin\Debug\Application.UIModels.pdb
+C:\Users\IMetta\source\repos\TP3\Application.UIModels\obj\Debug\Application.UIModels.csprojAssemblyReference.cache
+C:\Users\IMetta\source\repos\TP3\Application.UIModels\obj\Debug\Application.UIModels.csproj.CoreCompileInputs.cache
+C:\Users\IMetta\source\repos\TP3\Application.UIModels\obj\Debug\Application.UIModels.dll
+C:\Users\IMetta\source\repos\TP3\Application.UIModels\obj\Debug\Application.UIModels.pdb

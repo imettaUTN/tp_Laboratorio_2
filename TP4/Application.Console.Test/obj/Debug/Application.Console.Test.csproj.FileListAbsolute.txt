@@ -1,0 +1,2 @@
+C:\Users\IMetta\source\repos\TP3\Application.Console.Test\obj\Debug\Application.Console.Test.csprojAssemblyReference.cache
+C:\Users\IMetta\source\repos\TP3\Application.Console.Test\obj\Debug\Application.Console.Test.csproj.CoreCompileInputs.cache
