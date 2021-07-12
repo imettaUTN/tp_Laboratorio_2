@@ -78,11 +78,7 @@ namespace Application.UI
                 MessageBox.Show($"No se puede crear el aditivo: {ex.Message}", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.LogException(ex.Message);
                 this.DialogResult = DialogResult.Abort;
-            }
-            finally
-            {
-                this.Close();
-            }
+            }       
 
         }
         private void RefreshDataGrid()
@@ -129,10 +125,7 @@ namespace Application.UI
                 Logger.LogException(ex.Message);
                 this.DialogResult = DialogResult.Abort;
             }
-            finally
-            {
-                this.Close();
-            }
+           
 
         }
 
@@ -171,10 +164,7 @@ namespace Application.UI
                 Logger.LogException(ex.Message);
                 this.DialogResult = DialogResult.Abort;
             }
-            finally
-            {
-                this.Close();
-            }
+     
         }
 
 

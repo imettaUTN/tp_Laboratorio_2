@@ -18,6 +18,21 @@ namespace Application.Models.DATOS
             conexion = new SqlConnection(cadenaConexion);
         }
 
+        public static MateriaPrima ReadByDescripcion(string descripcion)
+        {
+            MateriaPrima mp = new MateriaPrima();
+
+            foreach(MateriaPrima matp in Read())
+            {
+                if(matp.Descripcion.Equals(descripcion))
+                {
+                    mp = matp;
+                }
+            }
+            return mp;
+        }
+
+
         public static List<MateriaPrima> Read()
         {
             List<MateriaPrima> materiasPrimas = new List<MateriaPrima>();
@@ -61,6 +76,10 @@ namespace Application.Models.DATOS
             return materiasPrimas;
 
         }
+
+
+
+
 
         public static string ReadMateriaPrimaById(int idMateriaPrima)
         {

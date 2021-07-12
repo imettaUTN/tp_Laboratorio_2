@@ -22,6 +22,11 @@ namespace Application.Models
             Enfriado = true;
         }
 
+
+        /// <summary> Tema Base de datos / sql / eventos 
+        /// Guardo un lacteo en la base de datos  e invoca un evento para mostrar un mensaje
+        /// </summary>
+        /// <param name="lacteo">lacteo</param>
         public static void GuardarEnDB(object lacteo)
         {
             if(LacteoDAO.Save((Leche)lacteo))
@@ -30,6 +35,11 @@ namespace Application.Models
             }
         }
 
+
+        /// <summary> Tema Base de datos / sql / eventos 
+        /// Actualizo un lacteo en la base de datos  e invoca un evento para mostrar un mensaje
+        /// </summary>
+        /// <param name="lacteo">lacteo</param>
         public static void ActualizarDB(object lacteo)
         {
             if (LacteoDAO.Update((Leche)lacteo))
@@ -37,6 +47,11 @@ namespace Application.Models
                 Leche.MostrarMensajeEnPantalla.Invoke("La leche se actualizado ok"); ;
             }
         }
+
+        /// <summary> Tema Base de datos / sql / eventos 
+        /// Elimino un lacteo en la base de datos  e invoca un evento para mostrar un mensaje
+        /// </summary>
+        /// <param name="lacteo">lacteo</param>
         public static void EliminarDB(object lacteo)
         {
             if (LacteoDAO.Delete((Leche)lacteo))

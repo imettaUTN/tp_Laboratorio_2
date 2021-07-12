@@ -46,7 +46,6 @@
             this.dtgLacteos.Name = "dtgLacteos";
             this.dtgLacteos.Size = new System.Drawing.Size(1062, 276);
             this.dtgLacteos.TabIndex = 0;
-
             // 
             // label2
             // 
@@ -101,7 +100,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmPrincipal";
             this.Text = "FrmPrincipal";
-            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPrincipal_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dtgLacteos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

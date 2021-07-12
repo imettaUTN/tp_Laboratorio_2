@@ -53,6 +53,9 @@ namespace Application.Models
             }
         }
 
+        /// <summary> tema threads
+        /// Invoca hilos para el guardado del lacteo en la base de datos
+        /// </summary>
         public void IniciarGuardadoDB()
         {
             if (this.hiloBaseDeDatos != null && this.hiloBaseDeDatos.IsAlive)
@@ -75,6 +78,9 @@ namespace Application.Models
             }
         }
 
+        /// <summary> tema threads
+        /// Invoca hilos para la actualizacion del lacteo en la base de datos
+        /// </summary>
         public void IniciarActualizacionDB()
         {
             if (this.hiloBaseDeDatos != null && this.hiloBaseDeDatos.IsAlive)
@@ -97,6 +103,9 @@ namespace Application.Models
             }
         }
 
+        /// <summary> tema threads
+        /// Invoca hilos para eliminar un lacteo en la base de datos
+        /// </summary>
         public void IniciarEliminacionDB()
         {
             if (this.hiloBaseDeDatos != null && this.hiloBaseDeDatos.IsAlive)
@@ -119,7 +128,9 @@ namespace Application.Models
             }
         }
         
-
+        /// <summary>
+        /// cierra los hilos si es que estan abiertos 
+        /// </summary>
         public void CerrarHilos()
         {
             if (this.hiloBaseDeDatos != null && this.hiloBaseDeDatos.IsAlive)
@@ -150,7 +161,9 @@ namespace Application.Models
             set { this.materiaPrima = value; }
         }
 
-        // uso metodo de extension
+        /// <summary> Tema metodos de extension
+        /// obtiene el nombre de la materia prima.
+        /// </summary>
         public String MateriaPrima
         {
             get { return this.GetDescriptionMateriaPrima(); }

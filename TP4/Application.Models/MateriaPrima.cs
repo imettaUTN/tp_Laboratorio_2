@@ -32,7 +32,7 @@ namespace Application.Models
             this.descripcionMp = descripcion;
             this.idMateriaPrima = DateTime.Now.Millisecond;
         }
-        /// <summary>
+        /// <summary> Tema serializacion
         /// carga el objeto a partir del xml deserializando el mismo.
         /// Tema Serializacion y archivos.
         /// </summary>
@@ -55,12 +55,9 @@ namespace Application.Models
             }
         }
 
-        public override string ToString()
-        {
-            return "materia prima";
-        }
-        /// <summary>
-        /// Guarda el objeto en un archivo xml serializando.
+
+        /// <summary> Tema Base de datos/sql
+        /// Guarda el objeto en la base de datos
         /// Tema Serializacion y archivos.
         /// </summary>
         public static bool GuardarMateriaPrima(MateriaPrima mp)
@@ -70,6 +67,11 @@ namespace Application.Models
             return true;
         }
 
+        /// <summary> Tema serializacion
+        /// Guarda la lista de objetos en un archivo serializado
+        /// </summary>
+        /// <param name="mp">lista de objetos de materia prima</param>
+        /// <returns></returns>
         public static bool GuardarMateriaPrima(List<MateriaPrima> mp)
         {
             try

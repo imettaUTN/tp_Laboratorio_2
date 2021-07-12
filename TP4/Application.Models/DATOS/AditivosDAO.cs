@@ -93,9 +93,8 @@ namespace Application.Models.DATOS
                 command.Parameters.Clear();
                 command.Connection = conexion;
                 command.CommandType = System.Data.CommandType.Text;
-                command.CommandText = "INSERT INTO [Aditivo] ([descripcion],[TipoAditivo]) VALUES(@descripcion,@TipoAditivo)";
+                command.CommandText = "INSERT INTO [Aditivo] ([descripcion]) VALUES(@descripcion,@TipoAditivo)";
                 command.Parameters.AddWithValue("@descripcion", aditivo.Descripcion);
-                command.Parameters.AddWithValue("@TipoAditivo", aditivo.Tipo);
                 conexion.Open();
                 retorno = command.ExecuteNonQuery() > 0;
 

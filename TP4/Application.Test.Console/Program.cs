@@ -28,6 +28,7 @@ namespace Application.Test.Console
             lacteo.Enfriado = true;
             lacteo.Estandarizado = true;
             lacteo.Pasteurizado = true;
+            lacteo.IdLacteo = 1;
 
             RepositorioAditivos aditivos1 = new RepositorioAditivos();
             RepositorioLacteos lacteos = new RepositorioLacteos();
@@ -52,6 +53,7 @@ namespace Application.Test.Console
             lacteo1.Enfriado = true;
             lacteo1.Estandarizado = true;
             lacteo1.Pasteurizado = true;
+            lacteo1.IdLacteo = 2;
 
             RepositorioAditivos aditivos2 = new RepositorioAditivos();
             aditivos2.Create(new AditivoProducto(0.45, "tyyy", "Espesante"));
@@ -92,7 +94,7 @@ namespace Application.Test.Console
                 System.Console.WriteLine("Remocion correcta de la lista de productos");
             }
 
-
+            System.Console.ReadKey();
         }
     }
 }

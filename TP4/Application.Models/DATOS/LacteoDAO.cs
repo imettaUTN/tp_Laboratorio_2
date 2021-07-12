@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
 
@@ -16,9 +17,26 @@ namespace Application.Models.DATOS
             conexion = new SqlConnection(cadenaConexion);
         }
 
-        public static bool Read(out Lacteo lacteo)
+        public static Lacteo ReadById(int idLacteo)
         {
-            bool retorno = false;
+            Lacteo lacteo = new Lacteo() ;
+
+            foreach(Lacteo lac in LacteoDAO.Read())
+            {
+                if(lac.IdLacteo == idLacteo )
+                {
+                    lacteo = lac;
+                }
+            }
+
+            return lacteo;
+        }
+
+
+
+        public static List<Lacteo> Read()
+        {
+            List<Lacteo> listaRetorno = new List<Lacteo>();
 
             try
             {
@@ -28,10 +46,10 @@ namespace Application.Models.DATOS
                 command.CommandText = "SELECT [TipoProducto],[IdMateriaPrima],[IdLacteo],[idOllaPasteurizacion],[metodoPasteurizacion],[estandarizado],[pasteurizado],[enfriado]  FROM [Lacteo]";
                 conexion.Open();
                 SqlDataReader oDr = command.ExecuteReader();
-                Lacteo lact = new Yogurth();
                 while (oDr.Read())
                 {
-                    lact.TipoProducto = oDr["TipoProducto"].ToString();
+                    Lacteo lact = new Yogurth();
+                     lact.TipoProducto = oDr["TipoProducto"].ToString();
                     lact.IdMateriaPrima = Convert.ToInt32(oDr["IdMateriaPrima"]);
                     lact.IdLacteo = Convert.ToInt32(oDr["IdLacteo"]);
                     lact.IdOllaPasteurizacion = Convert.ToInt32(oDr["idOllaPasteurizacion"]);
@@ -39,11 +57,8 @@ namespace Application.Models.DATOS
                     lact.Estandarizado = Boolean.Parse(oDr["estandarizado"].ToString());
                     lact.Pasteurizado = Boolean.Parse(oDr["pasteurizado"].ToString());
                     lact.Enfriado = Boolean.Parse(oDr["enfriado"].ToString());
-                  
-                  
-                }
-                lacteo = lact;
-                retorno = true;
+                    listaRetorno.Add(lact);
+                }               
             }
             catch (Exception e)
             {
@@ -57,9 +72,7 @@ namespace Application.Models.DATOS
 
                 }
             }
-
-            return retorno;
-
+            return listaRetorno;
         }
 
         public static bool Save(Lacteo lacteo)

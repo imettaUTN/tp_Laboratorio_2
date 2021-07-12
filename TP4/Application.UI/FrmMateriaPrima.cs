@@ -38,12 +38,13 @@ namespace Application.UI
             try
             {
                 MateriaPrima mp = new MateriaPrima();
+                Random rd = new Random(DateTime.Now.Millisecond);
 
                 mp.IndiceAcidez = Convert.ToDouble(txtIndiceAcidez.Text);
                 mp.LegajoTecnicoHabilitante = Convert.ToInt32(txtLegajoTecnico.Text);
                 mp.Descripcion = txtDescripcion.Text;
-                mp.HabilitadoParaFabrica = chHabFab.Checked;            
-
+                mp.HabilitadoParaFabrica = chHabFab.Checked;
+                mp.IdCertificado = rd.Next();
                 if (cbTambos.SelectedValue != null)
                 {
                     mp.IdTampo = ((DisplayObject)cbTambos.SelectedValue).Value;

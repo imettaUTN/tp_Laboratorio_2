@@ -31,9 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.materiaPrimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarMateriaPrimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verMateriaPrimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verMateriaPrimaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@
             this.productosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(844, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -64,6 +64,13 @@
             this.cargarMateriaPrimaToolStripMenuItem.Text = "Cargar Materia Prima";
             this.cargarMateriaPrimaToolStripMenuItem.Click += new System.EventHandler(this.cargarMateriaPrimaToolStripMenuItem_Click);
             // 
+            // verMateriaPrimaToolStripMenuItem
+            // 
+            this.verMateriaPrimaToolStripMenuItem.Name = "verMateriaPrimaToolStripMenuItem";
+            this.verMateriaPrimaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.verMateriaPrimaToolStripMenuItem.Text = "Ver Materia Prima";
+            this.verMateriaPrimaToolStripMenuItem.Click += new System.EventHandler(this.verMateriaPrimaToolStripMenuItem_Click);
+            // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -79,18 +86,12 @@
             this.cargarProductoToolStripMenuItem.Text = "Productos";
             this.cargarProductoToolStripMenuItem.Click += new System.EventHandler(this.cargarProductoToolStripMenuItem_Click);
             // 
-            // verMateriaPrimaToolStripMenuItem
-            // 
-            this.verMateriaPrimaToolStripMenuItem.Name = "verMateriaPrimaToolStripMenuItem";
-            this.verMateriaPrimaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.verMateriaPrimaToolStripMenuItem.Text = "Ver Materia Prima";
-            this.verMateriaPrimaToolStripMenuItem.Click += new System.EventHandler(this.verMateriaPrimaToolStripMenuItem_Click);
-            // 
             // FrmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 166);
+            this.BackgroundImage = global::Application.UI.Properties.Resources.descarga;
+            this.ClientSize = new System.Drawing.Size(844, 301);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;

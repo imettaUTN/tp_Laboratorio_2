@@ -31,7 +31,7 @@
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtIndiceAcidez = new System.Windows.Forms.TextBox();
             this.txtLegajoTecnico = new System.Windows.Forms.TextBox();
-            this.lblDesc = new System.Windows.Forms.Label();
+            this.lblTanque = new System.Windows.Forms.Label();
             this.lblDesripcion = new System.Windows.Forms.Label();
             this.lblIndiceAcidez = new System.Windows.Forms.Label();
             this.lblLegajoTecnico = new System.Windows.Forms.Label();
@@ -65,14 +65,14 @@
             this.txtLegajoTecnico.Size = new System.Drawing.Size(367, 20);
             this.txtLegajoTecnico.TabIndex = 3;
             // 
-            // lblDesc
+            // lblTanque
             // 
-            this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(44, 30);
-            this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(54, 13);
-            this.lblDesc.TabIndex = 5;
-            this.lblDesc.Text = "IdLacteo tanque";
+            this.lblTanque.AutoSize = true;
+            this.lblTanque.Location = new System.Drawing.Point(44, 30);
+            this.lblTanque.Name = "lblTanque";
+            this.lblTanque.Size = new System.Drawing.Size(44, 13);
+            this.lblTanque.TabIndex = 5;
+            this.lblTanque.Text = "Tanque";
             // 
             // lblDesripcion
             // 
@@ -144,9 +144,9 @@
             this.lblTambo.AutoSize = true;
             this.lblTambo.Location = new System.Drawing.Point(44, 71);
             this.lblTambo.Name = "lblTambo";
-            this.lblTambo.Size = new System.Drawing.Size(50, 13);
+            this.lblTambo.Size = new System.Drawing.Size(40, 13);
             this.lblTambo.TabIndex = 14;
-            this.lblTambo.Text = "IdLacteo tambo";
+            this.lblTambo.Text = "Tambo";
             // 
             // cbTanques
             // 
@@ -180,14 +180,14 @@
             this.Controls.Add(this.lblLegajoTecnico);
             this.Controls.Add(this.lblIndiceAcidez);
             this.Controls.Add(this.lblDesripcion);
-            this.Controls.Add(this.lblDesc);
+            this.Controls.Add(this.lblTanque);
             this.Controls.Add(this.txtLegajoTecnico);
             this.Controls.Add(this.txtIndiceAcidez);
             this.Controls.Add(this.txtDescripcion);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMateriaPrima";
-            this.Text = "Materia Prima";
+            this.Text = "Recepcion de Materia Prima";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,7 +197,7 @@
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtIndiceAcidez;
         private System.Windows.Forms.TextBox txtLegajoTecnico;
-        private System.Windows.Forms.Label lblDesc;
+        private System.Windows.Forms.Label lblTanque;
         private System.Windows.Forms.Label lblDesripcion;
         private System.Windows.Forms.Label lblIndiceAcidez;
         private System.Windows.Forms.Label lblLegajoTecnico;

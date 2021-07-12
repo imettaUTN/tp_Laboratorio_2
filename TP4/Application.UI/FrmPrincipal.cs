@@ -1,6 +1,8 @@
 ﻿using Application.Models;
+using Application.Models.DATOS;
 using Application.Models.Repositorios;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Application.UI
@@ -14,10 +16,12 @@ namespace Application.UI
         {
             InitializeComponent();
             lacteos = new RepositorioLacteos();
-        }
-        private void FrmPrincipal_Load(object sender, EventArgs e)
-        {
-            RefreshDataGrid();
+            List<Lacteo> lacteosList = LacteoDAO.Read();
+
+
+            System.ComponentModel.BindingList<Lacteo> lacteosDG = new System.ComponentModel.BindingList<Lacteo>(lacteosList);
+            dtgLacteos.DataSource = lacteosDG;
+
         }
         private void RefreshDataGrid()
         {
@@ -84,5 +88,13 @@ namespace Application.UI
 
         }
 
+        private void FrmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (dtgLacteos.RowCount > 0)
+            {
+                //cierro los hilos abiertos si aun continuan abiertos
+                ((Lacteo)dtgLacteos.CurrentRow.DataBoundItem).CerrarHilos();
+            }
+        }
     }
 }
