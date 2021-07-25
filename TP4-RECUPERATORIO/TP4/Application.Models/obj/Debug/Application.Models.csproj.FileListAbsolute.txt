@@ -1,0 +1,9 @@
+C:\Users\IMetta\source\repos\TP3\Application.Models\bin\Debug\Application.Models.dll
+C:\Users\IMetta\source\repos\TP3\Application.Models\bin\Debug\Application.Models.pdb
+C:\Users\IMetta\source\repos\TP3\Application.Models\bin\Debug\Application.File.dll
+C:\Users\IMetta\source\repos\TP3\Application.Models\bin\Debug\Application.File.pdb
+C:\Users\IMetta\source\repos\TP3\Application.Models\obj\Debug\Application.Models.csprojAssemblyReference.cache
+C:\Users\IMetta\source\repos\TP3\Application.Models\obj\Debug\Application.Models.csproj.CoreCompileInputs.cache
+C:\Users\IMetta\source\repos\TP3\Application.Models\obj\Debug\Application.Models.csproj.CopyComplete
+C:\Users\IMetta\source\repos\TP3\Application.Models\obj\Debug\Application.Models.dll
+C:\Users\IMetta\source\repos\TP3\Application.Models\obj\Debug\Application.Models.pdb

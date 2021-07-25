@@ -1,0 +1,9 @@
+                     Informe Estandarizacion : AUTORIZADO                       Fecha Creacion:0001-01-01 12:00  
+ Tecnico Autorizante:JUAN PEREZ                                                                                          
+ Legajo: 123456     Dni:33298631     Cargo: TECNICO                                                                  
+                                                       RESULTADOS:                                                                                            
+ Temperatura en que se calento producto: 30                                                                                   
+ Porcentaje tenor graso : 1,3                                                                                                      
+ Porcentaje solidos : 2,7                                                                                                            
+                                                                                                                                  FIRMADO DIGITALMENTE        
+

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfMateriaPrima xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <MateriaPrima>
+    <IdMateriaPrima>69</IdMateriaPrima>
+    <Descripcion>mp 3</Descripcion>
+    <IdTanque>255</IdTanque>
+    <HabilitadoParaFabrica>false</HabilitadoParaFabrica>
+    <IdTampo>50</IdTampo>
+    <IndiceAcidez>1.25</IndiceAcidez>
+    <IdCertificado>69</IdCertificado>
+    <LegajoTecnicoHabilitante>0</LegajoTecnicoHabilitante>
+  </MateriaPrima>
+  <MateriaPrima>
+    <IdMateriaPrima>69</IdMateriaPrima>
+    <Descripcion>mp 1</Descripcion>
+    <IdTanque>365</IdTanque>
+    <HabilitadoParaFabrica>false</HabilitadoParaFabrica>
+    <IdTampo>70</IdTampo>
+    <IndiceAcidez>2.25</IndiceAcidez>
+    <IdCertificado>69</IdCertificado>
+    <LegajoTecnicoHabilitante>0</LegajoTecnicoHabilitante>
+  </MateriaPrima>
+  <MateriaPrima>
+    <IdMateriaPrima>69</IdMateriaPrima>
+    <Descripcion>mp 4</Descripcion>
+    <IdTanque>275</IdTanque>
+    <HabilitadoParaFabrica>false</HabilitadoParaFabrica>
+    <IdTampo>80</IdTampo>
+    <IndiceAcidez>3.25</IndiceAcidez>
+    <IdCertificado>69</IdCertificado>
+    <LegajoTecnicoHabilitante>0</LegajoTecnicoHabilitante>
+  </MateriaPrima>
+</ArrayOfMateriaPrima>

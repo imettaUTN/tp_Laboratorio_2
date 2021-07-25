@@ -1,0 +1,1 @@
+Materia prima no puede ser nula
