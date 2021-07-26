@@ -40,3 +40,17 @@ C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.Test.Console\
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.csproj.CopyComplete
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.exe
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.Test.Console.exe.config
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.Test.Console.exe
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.Test.Console.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.Models.dll
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.File.dll
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.UIModels.dll
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.Models.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.File.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\bin\Debug\Application.UIModels.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.csprojAssemblyReference.cache
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.csproj.CoreCompileInputs.cache
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.csproj.CopyComplete
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.exe
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.Test.Console\obj\Debug\Application.Test.Console.pdb

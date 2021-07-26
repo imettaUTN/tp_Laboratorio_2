@@ -12,7 +12,15 @@ namespace Application.Models
     {
         private int idTamizador;
         private string descripcion;
+
+
         public Tamizador(){}
+
+        public Tamizador(int idTamizador, string descripcion)
+        {
+            this.IdTamizador = idTamizador;
+            this.Descripcion = descripcion;
+        }
 
         public int IdTamizador
         {
@@ -25,6 +33,10 @@ namespace Application.Models
             set { this.descripcion = value; }
         }
 
+        /// <summary>
+        /// Lee los tamizadores de la db
+        /// </summary>
+        /// <returns></returns>
         public static List<DisplayObject> LeerTamizadoresParaCombo()
         {
             return TamizadorDAO.LeerTamizadoresParaCombo();

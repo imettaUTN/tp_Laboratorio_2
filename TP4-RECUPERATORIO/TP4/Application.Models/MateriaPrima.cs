@@ -61,9 +61,17 @@ namespace Application.Models
         /// </summary>
         public static bool GuardarMateriaPrima(MateriaPrima mp)
         {
-            //LO GUARDO EN LA BASE DE DATOS 
-            MateriaPrimaDAO.Save(mp);
-            return true;
+            bool result = false;
+            try
+            {
+                //LO GUARDO EN LA BASE DE DATOS 
+                result=MateriaPrimaDAO.Save(mp);
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            return result;
         }
 
         /// <summary> Tema Base de datos/sql

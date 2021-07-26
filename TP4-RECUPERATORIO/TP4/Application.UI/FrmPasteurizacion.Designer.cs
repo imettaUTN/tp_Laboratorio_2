@@ -80,6 +80,7 @@
             // 
             // cboTipoPasteurizacion
             // 
+            this.cboTipoPasteurizacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoPasteurizacion.FormattingEnabled = true;
             this.cboTipoPasteurizacion.Location = new System.Drawing.Point(5, 97);
             this.cboTipoPasteurizacion.Name = "cboTipoPasteurizacion";
@@ -187,6 +188,7 @@
             // 
             // cboTecnico
             // 
+            this.cboTecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTecnico.FormattingEnabled = true;
             this.cboTecnico.Location = new System.Drawing.Point(10, 89);
             this.cboTecnico.Name = "cboTecnico";

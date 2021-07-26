@@ -64,6 +64,7 @@
             // 
             // cboTipoEnvase
             // 
+            this.cboTipoEnvase.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoEnvase.FormattingEnabled = true;
             this.cboTipoEnvase.Location = new System.Drawing.Point(6, 93);
             this.cboTipoEnvase.Name = "cboTipoEnvase";
@@ -81,6 +82,7 @@
             // 
             // cboTecnico
             // 
+            this.cboTecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTecnico.FormattingEnabled = true;
             this.cboTecnico.Location = new System.Drawing.Point(6, 43);
             this.cboTecnico.Name = "cboTecnico";

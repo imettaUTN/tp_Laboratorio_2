@@ -9,3 +9,9 @@ C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.UIModels\bin\
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.UIModels\obj\Debug\Application.UIModels.csproj.CoreCompileInputs.cache
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.UIModels\obj\Debug\Application.UIModels.dll
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.UIModels\obj\Debug\Application.UIModels.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.UIModels\bin\Debug\Application.UIModels.dll
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.UIModels\bin\Debug\Application.UIModels.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.UIModels\obj\Debug\Application.UIModels.csprojAssemblyReference.cache
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.UIModels\obj\Debug\Application.UIModels.csproj.CoreCompileInputs.cache
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.UIModels\obj\Debug\Application.UIModels.dll
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.UIModels\obj\Debug\Application.UIModels.pdb

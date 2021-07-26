@@ -115,6 +115,11 @@ namespace Application.Models
 
             }
         }
+
+        /// <summary>
+        /// Borra los informes de la db
+        /// </summary>
+        /// <param name="informes"></param>
         public void IniciarEliminacionInformesDB(Dictionary<string, int> informes)
         {
             if (this.hiloBaseDeDatos != null && this.hiloBaseDeDatos.IsAlive)
@@ -146,6 +151,11 @@ namespace Application.Models
             {
                 this.hiloBaseDeDatos.Abort();
             }
+        }
+
+        public bool HiloAbierto()
+        {
+            return (this.hiloBaseDeDatos != null && this.hiloBaseDeDatos.IsAlive);
         }
         public int IdLacteo
         {

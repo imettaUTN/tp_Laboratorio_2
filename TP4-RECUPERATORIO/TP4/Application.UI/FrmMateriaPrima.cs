@@ -3,6 +3,7 @@ using Application.Models.DATOS;
 using Application.Models.Logs;
 using Application.UIModels;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 namespace Application.UI
 {
@@ -31,17 +32,49 @@ namespace Application.UI
             cboTambos.ValueMember = null;
             cboTambos.DisplayMember = "Name";
             cboTambos.DataSource = objects2;
+
+            System.ComponentModel.BindingList<DisplayObject> objects3 = new System.ComponentModel.BindingList<DisplayObject>();
+            foreach (DisplayObject mp in PersonaDAO.LeerTecnicosParaCombo())
+            {
+                objects3.Add(mp);
+            }
+            cboTecnico.ValueMember = null;
+            cboTecnico.DisplayMember = "Name";
+            cboTecnico.DataSource = objects3;
+
+
         }
 
         private void btCargar_Click(object sender, EventArgs e)
         {
+
+            string regexValidationDouble = @"^[0-9]{1,2}(\.[0-9]{1,2})?$";
+
+            if (this.txtIndiceAcidez.Text.ToDouble() <= 0)
+            {
+                MessageBox.Show("El indice de acidez debe ser mayor a 0", "Error en el formulario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtDescripcion.Text))
+            {
+                MessageBox.Show("Debe ingresar una descripcion", "Error en el formulario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!Regex.IsMatch(txtIndiceAcidez.Text, regexValidationDouble))
+            {
+                MessageBox.Show("El indice de acidez debe ser numerica", "Error en el formulario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 MateriaPrima mp = new MateriaPrima();
                 Random rd = new Random(DateTime.Now.Millisecond);
 
                 mp.IndiceAcidez = txtIndiceAcidez.Text.ToDouble();
-                mp.LegajoTecnicoHabilitante = txtLegajoTecnico.Text.ToInt();
+                mp.LegajoTecnicoHabilitante = ((DisplayObject)cboTecnico.SelectedValue).Value;
                 mp.Descripcion = txtDescripcion.Text;
                 mp.HabilitadoParaFabrica = chkHabFab.Checked;
                 mp.IdCertificado = rd.Next();

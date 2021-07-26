@@ -7,7 +7,12 @@ using System.Text;
 namespace Application.Models.DATOS
 {
     public static class MateriaPrimaDAO
-    {     
+    {
+        /// <summary>
+        /// Lee un materia en base a su descripcion
+        /// </summary>
+        /// <param name="descripcion"> descripcion de la materia prima</param>
+        /// <returns> objeto materia prima</returns>
         public static MateriaPrima ReadByDescripcion(string descripcion)
         {
             MateriaPrima mp = new MateriaPrima();
@@ -22,6 +27,11 @@ namespace Application.Models.DATOS
             return mp;
         }
 
+        /// <summary>
+        /// Busca una materia prima en base a su id
+        /// </summary>
+        /// <param name="id"> id materia prima</param>
+        /// <returns> objeto materia prima </returns>
         public static MateriaPrima ReadMateriaPrimaPorId(int id)
         {
             MateriaPrima mp = new MateriaPrima();
@@ -36,6 +46,10 @@ namespace Application.Models.DATOS
             return mp;
         }
 
+        /// <summary>
+        /// lee todas las materia primas de la db
+        /// </summary>
+        /// <returns>lista de todos las materias primas cargadas en la db</returns>
         public static List<MateriaPrima> Read()
         {
             List<MateriaPrima> materiasPrimas = new List<MateriaPrima>();
@@ -75,32 +89,12 @@ namespace Application.Models.DATOS
             return materiasPrimas;
 
         }
-        public static string ReadMateriaPrimaById(int idMateriaPrima)
-        {
-            string descripcion = string.Empty;
-            SqlDataReader oDr = null;
-
-            try                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                {
-                oDr = DB.ExecuteReader("SELECT [idMateriaPrima],[idTanque],[IdTampo],[descripcion],[IndiceAcidez],[legajoTecnicoHab],[habilitadoFabrica],[idcertificado]  FROM [MateriaPrima] where idMateriaPrima = " + idMateriaPrima);               
-                while (oDr.Read())
-                {
-                    descripcion = oDr["descripcion"].ToString();
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally
-            {
-                if (!(oDr is null))
-                {
-                    oDr.Close();
-                }
-            }
-
-            return descripcion;
-        }
+       
+        /// <summary>
+        /// Guarda una materia en la base de datos
+        /// </summary>
+        /// <param name="mp"> objeto materia prima a guardar</param>
+        /// <returns>booleando indicando si se guardo ok o no</returns>
         public static bool Save(MateriaPrima mp)
         {
             bool retorno = false;
@@ -122,6 +116,11 @@ namespace Application.Models.DATOS
             }
             return retorno;
         }
+
+        /// <summary>
+        /// Lee los datos en la db para los combos de la aplicacion
+        /// </summary>
+        /// <returns>Lista de tambos</returns>
         public static List<DisplayObject> LeerTambos()
         {
             List<DisplayObject> tambos = new List<DisplayObject>();
@@ -148,6 +147,11 @@ namespace Application.Models.DATOS
             }
             return tambos;
         }
+
+        /// <summary>
+        /// Lee los datos en la db para los combos de la aplicacion
+        /// </summary>
+        /// <returns>Lista de tanques</returns>
         public static List<DisplayObject> LeerTanques()
         {
             List<DisplayObject> tambos = new List<DisplayObject>();
@@ -175,6 +179,12 @@ namespace Application.Models.DATOS
             }
             return tambos;
         }
+
+        /// <summary>
+        /// Lee una materia prima para segun id
+        /// </summary>
+        /// <param name="idMateriaPrima"></param>
+        /// <returns></returns>
         public static DisplayObject LeerMateriaPrimaParaCombo(int idMateriaPrima)
         {
             DisplayObject dobj = new DisplayObject();
@@ -188,6 +198,11 @@ namespace Application.Models.DATOS
             }
             return dobj;
         }
+
+        /// <summary>
+        /// Lee materias primas para la aplicacion en la db
+        /// </summary>
+        /// <returns> lista de objetos de mp</returns>
         public static List<DisplayObject> LeerMateriaPrimaParaCombo()
         {
             List<DisplayObject> mps= new List<DisplayObject>();

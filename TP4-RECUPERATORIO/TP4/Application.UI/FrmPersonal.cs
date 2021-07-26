@@ -9,7 +9,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Application.Models;
-
+using Application.Models.Logs;
 
 namespace Application.UI
 {
@@ -62,7 +62,7 @@ namespace Application.UI
                 valido = false;
                 sb.AppendLine("El dni debe contenter solo numero");
             }
-            if(!(rbFemenino.Checked || rbMasculino.Checked || rbFemenino.Checked))
+            if(!(rbFemenino.Checked || rbMasculino.Checked || rbOtro.Checked))
             {
                 valido = false;
                 sb.AppendLine("Debe seleccionar un genero");
@@ -94,14 +94,24 @@ namespace Application.UI
                     genero = "O";
                 }
 
-                Persona persona = new Persona(txtLegajo.Text.ToInt(), txtDni.Text.ToInt(), txtNombre.Text, txtApellido.Text, txtCargo.Text, genero, chkEsTecnico.Checked);
-                if(!persona.Guardar())
+                try
                 {
-                   MessageBox.Show("Error al guardar la Persona", "Error en el formulario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Persona persona = new Persona(txtLegajo.Text.ToInt(), txtDni.Text.ToInt(), txtNombre.Text, txtApellido.Text, txtCargo.Text, genero, chkEsTecnico.Checked);
+                    if (!persona.Guardar())
+                    {
+                        throw new Exception("Error al guardar la Persona");
+                    }
+                    MessageBox.Show("Guardado OK");                    
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Guardado OK");
+                    MessageBox.Show($"No se puede guardar el personal: {ex.Message}", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Logger.LogException(ex.Message);
+                    this.DialogResult = DialogResult.Abort;
+                }
+                finally
+                {
+                    this.Close();
                 }
             }
             

@@ -226,6 +226,7 @@
             // 
             // cboTamizador
             // 
+            this.cboTamizador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTamizador.FormattingEnabled = true;
             this.cboTamizador.Location = new System.Drawing.Point(13, 32);
             this.cboTamizador.Name = "cboTamizador";
@@ -234,6 +235,7 @@
             // 
             // cboTecnico
             // 
+            this.cboTecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTecnico.FormattingEnabled = true;
             this.cboTecnico.Location = new System.Drawing.Point(13, 89);
             this.cboTecnico.Name = "cboTecnico";

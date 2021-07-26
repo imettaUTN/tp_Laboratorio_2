@@ -10,6 +10,12 @@ namespace Application.Models.DATOS
 {
     public class InformeEstandarizadoDAO
     {
+
+        /// <summary> TEMA DB/SQL
+        /// Busca un informe por el ID
+        /// </summary>
+        /// <param name="idInforme"> id informe</param>
+        /// <returns> objeto del informe</returns>
         public static InformeEstandarizado ReadById(int idInforme)
         {
             InformeEstandarizado informe = null;
@@ -24,6 +30,10 @@ namespace Application.Models.DATOS
             return informe;
         }
 
+        /// <summary> TEMA DB/SQL
+        /// Busca todos los informes cargados en la db 
+        /// </summary>
+        /// <returns> lista de objeto del informe</returns>
         public static List<InformeEstandarizado> Read()
         {
             List<InformeEstandarizado> informes = new List<InformeEstandarizado>();
@@ -66,7 +76,12 @@ namespace Application.Models.DATOS
             return informes;
         }
 
-       public static int  Save(InformeEstandarizado inf)
+        /// <summary>
+        /// Guarda un informe en la base de datos
+        /// </summary>
+        /// <param name="inf">objeto informe</param>
+        /// <returns> id informe generado</returns>
+        public static int  Save(InformeEstandarizado inf)
        {
             int idInforme = -1;
             SqlDataReader oDr = null;
@@ -100,6 +115,11 @@ namespace Application.Models.DATOS
 
         }
 
+        /// <summary>
+        /// Actualizad un informe en la base de datos
+        /// </summary>
+        /// <param name="inf"> objeto informe a actualizar</param>
+        /// <returns></returns>
         public static bool Update(InformeEstandarizado inf)
         {
             bool retorno = false;
@@ -137,6 +157,11 @@ namespace Application.Models.DATOS
 
         }
 
+        /// <summary>
+        /// Borra un informe de la base de datos
+        /// </summary>
+        /// <param name="idInforme"> id informe a eliminar</param>
+        /// <returns> booleando incando si se elimino bien o no </returns>
         public static bool Delete(int idInforme)
         {
             bool retorno = false;

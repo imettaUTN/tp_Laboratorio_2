@@ -40,6 +40,11 @@ namespace Application.Models
                 Leche.MostrarMensajeEnPantalla.Invoke("La leche se actualizado ok"); ;
             }
         }
+
+        /// <summary> Tema Base de datos / sql / eventos 
+        /// Elimina un lacteo en la base de datos  e invoca un evento para mostrar un mensaje
+        /// </summary>
+        /// <param name="lacteo">lacteo</param>
         public static void EliminarDB(object lacteo)
         {
             if (LacteoDAO.Delete(((Leche)lacteo).IdLacteo))
@@ -47,6 +52,10 @@ namespace Application.Models
                 Leche.MostrarMensajeEnPantalla.Invoke("La leche se elimino ok"); ;
             }
         }
+        /// <summary>
+        /// Elimina los informes de la db
+        /// </summary>
+        /// <param name="informes"></param>
         public static void EliminarInformesDB(object informes)
         {
             Dictionary<string, int> inf = (Dictionary<string, int>)informes;

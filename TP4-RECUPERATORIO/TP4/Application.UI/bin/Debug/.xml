@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfAditivoProducto xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AditivoProducto>
+    <Descripcion>Aditivo 1</Descripcion>
+    <ID>1</ID>
+    <Tipo>Espesante</Tipo>
+    <Cantidad>8</Cantidad>
+  </AditivoProducto>
+</ArrayOfAditivoProducto>

@@ -30,7 +30,6 @@
         {
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.txtIndiceAcidez = new System.Windows.Forms.TextBox();
-            this.txtLegajoTecnico = new System.Windows.Forms.TextBox();
             this.lblTanque = new System.Windows.Forms.Label();
             this.lblDesripcion = new System.Windows.Forms.Label();
             this.lblIndiceAcidez = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.lblTambo = new System.Windows.Forms.Label();
             this.cbTanques = new System.Windows.Forms.ComboBox();
             this.cboTambos = new System.Windows.Forms.ComboBox();
+            this.cboTecnico = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtDescripcion
@@ -57,13 +57,6 @@
             this.txtIndiceAcidez.Name = "txtIndiceAcidez";
             this.txtIndiceAcidez.Size = new System.Drawing.Size(367, 20);
             this.txtIndiceAcidez.TabIndex = 2;
-            // 
-            // txtLegajoTecnico
-            // 
-            this.txtLegajoTecnico.Location = new System.Drawing.Point(129, 191);
-            this.txtLegajoTecnico.Name = "txtLegajoTecnico";
-            this.txtLegajoTecnico.Size = new System.Drawing.Size(367, 20);
-            this.txtLegajoTecnico.TabIndex = 3;
             // 
             // lblTanque
             // 
@@ -150,6 +143,7 @@
             // 
             // cbTanques
             // 
+            this.cbTanques.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTanques.FormattingEnabled = true;
             this.cbTanques.Location = new System.Drawing.Point(129, 30);
             this.cbTanques.Name = "cbTanques";
@@ -159,17 +153,28 @@
             // 
             // cboTambos
             // 
+            this.cboTambos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTambos.FormattingEnabled = true;
             this.cboTambos.Location = new System.Drawing.Point(129, 71);
             this.cboTambos.Name = "cboTambos";
             this.cboTambos.Size = new System.Drawing.Size(367, 21);
             this.cboTambos.TabIndex = 16;
             // 
+            // cboTecnico
+            // 
+            this.cboTecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTecnico.FormattingEnabled = true;
+            this.cboTecnico.Location = new System.Drawing.Point(129, 194);
+            this.cboTecnico.Name = "cboTecnico";
+            this.cboTecnico.Size = new System.Drawing.Size(367, 21);
+            this.cboTecnico.TabIndex = 17;
+            // 
             // FrmMateriaPrima
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 319);
+            this.Controls.Add(this.cboTecnico);
             this.Controls.Add(this.cboTambos);
             this.Controls.Add(this.cbTanques);
             this.Controls.Add(this.lblTambo);
@@ -181,7 +186,6 @@
             this.Controls.Add(this.lblIndiceAcidez);
             this.Controls.Add(this.lblDesripcion);
             this.Controls.Add(this.lblTanque);
-            this.Controls.Add(this.txtLegajoTecnico);
             this.Controls.Add(this.txtIndiceAcidez);
             this.Controls.Add(this.txtDescripcion);
             this.MaximizeBox = false;
@@ -196,7 +200,6 @@
         #endregion
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.TextBox txtIndiceAcidez;
-        private System.Windows.Forms.TextBox txtLegajoTecnico;
         private System.Windows.Forms.Label lblTanque;
         private System.Windows.Forms.Label lblDesripcion;
         private System.Windows.Forms.Label lblIndiceAcidez;
@@ -208,5 +211,6 @@
         private System.Windows.Forms.Label lblTambo;
         private System.Windows.Forms.ComboBox cbTanques;
         private System.Windows.Forms.ComboBox cboTambos;
+        private System.Windows.Forms.ComboBox cboTecnico;
     }
 }

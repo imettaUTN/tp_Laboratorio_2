@@ -257,6 +257,7 @@
             // 
             // cboTecnico
             // 
+            this.cboTecnico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTecnico.FormattingEnabled = true;
             this.cboTecnico.Location = new System.Drawing.Point(10, 89);
             this.cboTecnico.Name = "cboTecnico";

@@ -10,6 +10,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -43,6 +44,19 @@ namespace Application.UI
         /// <param name="e"></param>
         private void btAdd_Click(object sender, EventArgs e)
         {
+           string regexValidationDouble = @"^[0-9]{1,2}(\.[0-9]{1,2})?$";
+
+            if (this.txtCantidad.Text.ToDouble() <= 0)
+            {
+                MessageBox.Show("La cantidad debe ser mayor a 0", "Error en el formulario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!Regex.IsMatch(txtCantidad.Text, regexValidationDouble))
+            {
+                MessageBox.Show("La cantidad debe ser numerica", "Error en el formulario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             try
             { 
                 AditivoProducto aditivo = new AditivoProducto()
@@ -57,7 +71,7 @@ namespace Application.UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"No se puede crear el lacteo: {ex.Message}", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"No se puede crear el aditivo: {ex.Message}", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Logger.LogException(ex.Message);
                 this.DialogResult = DialogResult.Abort;
             }
@@ -71,20 +85,5 @@ namespace Application.UI
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
-        //public void MostrarMensajePantalla(string dato)
-        //{
-        //    if (this.InvokeRequired)
-        //    {
-        //        MostrarMensaje delegado = new MostrarMensaje(this.MostrarMensajePantalla);
-
-        //        object[] arrayObjetos = new object[] { dato };
-
-        //        this.Invoke(delegado, arrayObjetos);
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show(dato);
-        //    }
-        //}
     }
 }

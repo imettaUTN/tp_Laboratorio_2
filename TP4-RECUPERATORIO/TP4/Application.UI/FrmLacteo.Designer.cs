@@ -119,6 +119,7 @@
             // 
             // cboMateriaPrima
             // 
+            this.cboMateriaPrima.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMateriaPrima.FormattingEnabled = true;
             this.cboMateriaPrima.Location = new System.Drawing.Point(15, 61);
             this.cboMateriaPrima.Name = "cboMateriaPrima";
@@ -241,7 +242,7 @@
             this.btInocularYMezclar.Name = "btInocularYMezclar";
             this.btInocularYMezclar.Size = new System.Drawing.Size(114, 23);
             this.btInocularYMezclar.TabIndex = 49;
-            this.btInocularYMezclar.Text = "Inocular y Mezclar";
+            this.btInocularYMezclar.Text = "Incubar  y Batir";
             this.btInocularYMezclar.UseVisualStyleBackColor = true;
             this.btInocularYMezclar.Click += new System.EventHandler(this.btInocularYMezclar_Click);
             // 
@@ -333,11 +334,13 @@
             // 
             // cboTipo
             // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
             this.cboTipo.Location = new System.Drawing.Point(15, 115);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(326, 21);
             this.cboTipo.TabIndex = 60;
+            this.cboTipo.SelectedValueChanged += new System.EventHandler(this.cboTipo_SelectedValueChanged);
             // 
             // btActualizar
             // 

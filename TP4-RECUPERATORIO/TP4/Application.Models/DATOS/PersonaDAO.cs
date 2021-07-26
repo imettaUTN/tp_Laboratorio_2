@@ -8,6 +8,11 @@ namespace Application.Models.DATOS
 {
     public static class PersonaDAO
     {
+        /// <summary>
+        /// Lee una persona de la db en base al legajo
+        /// </summary>
+        /// <param name="legajo">legajo</param>
+        /// <returns>objeto persona</returns>
         public static Persona ReadPersonaByLegajo(int legajo)
         {
             Persona persona = null;
@@ -45,6 +50,10 @@ namespace Application.Models.DATOS
             return persona;
         }
 
+        /// <summary>
+        /// Leee una lista de personas de la db
+        /// </summary>
+        /// <returns>lista de personas</returns>
         public static List<Persona> Read()
         {
             List<Persona> personas = new List<Persona>();
@@ -62,6 +71,7 @@ namespace Application.Models.DATOS
                     persona.Apellido = oDr["apellido"].ToString();
                     persona.Cargo = oDr["cargo"].ToString();
                     persona.Genero = oDr["genero"].ToString();
+                    persona.EsTecnico = Boolean.Parse(oDr["esTecnico"].ToString());
                     personas.Add(persona);
                 }
               
@@ -79,6 +89,12 @@ namespace Application.Models.DATOS
             }
             return personas;
         }
+
+        /// <summary>
+        /// Guarda una persona en la base de datos
+        /// </summary>
+        /// <param name="persona"></param>
+        /// <returns></returns>
         public static bool Save(Persona persona)
         {
             bool retorno = false;
@@ -99,7 +115,34 @@ namespace Application.Models.DATOS
                 throw e;
             }
             return retorno;
-        }              
+        }
+
+        /// <summary>
+        /// Elimina una persona de la db
+        /// </summary>
+        /// <param name="legajo"></param>
+        /// <returns></returns>
+        public static bool Eliminar(int legajo)
+        {
+            bool retorno = false;
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            try
+            {
+                parameters.Add(new SqlParameter("@legajo", legajo));
+                retorno = DB.ExecuteNoQuery("DELETE FROM [dbo].[Personal] WHERE legajo = @legajo", parameters);
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return retorno;
+        }
+
+        /// <summary>
+        /// Indica si existe un legajo en la db
+        /// </summary>
+        /// <param name="legajo">legajo</param>
+        /// <returns></returns>
         public static bool ExistesLegajo(int legajo)
         {
             SqlDataReader oDr = null;
@@ -126,6 +169,11 @@ namespace Application.Models.DATOS
             }
             return retorno;
         }
+
+        /// <summary>
+        /// Lista las personas que son tecnicas para la aplicacion
+        /// </summary>
+        /// <returns></returns>
         public static List<DisplayObject> LeerTecnicosParaCombo()
         {
             List<DisplayObject> mps = new List<DisplayObject>();

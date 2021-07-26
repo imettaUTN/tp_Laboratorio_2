@@ -1,8 +1,10 @@
 ﻿using Application.Models;
 using Application.Models.DATOS;
+using Application.Models.Logs;
 using Application.Models.Repositorios;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace Application.UI
@@ -21,14 +23,19 @@ namespace Application.UI
         }
         private void RefreshDataGrid()
         {
-            dtgLacteos.DataSource = null;
-            List<Lacteo> lacteosList = LacteoDAO.Read();
-            System.ComponentModel.BindingList<Lacteo> lacteosDG = new System.ComponentModel.BindingList<Lacteo>(lacteosList);
-            dtgLacteos.DataSource = lacteosDG;
-            //if (!(this.lacteos is null) && this.lacteos.Count() >0)
-            //{
-            //    dtgLacteos.DataSource = this.lacteos.GetAll();               
-            //}
+            try
+            {
+                dtgLacteos.DataSource = null;
+                List<Lacteo> lacteosList = LacteoDAO.Read();
+                System.ComponentModel.BindingList<Lacteo> lacteosDG = new System.ComponentModel.BindingList<Lacteo>(lacteosList);
+                dtgLacteos.DataSource = lacteosDG;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se puede actualizar el listado de lacteos: {ex.Message}", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Logger.LogException(ex.Message);
+                this.DialogResult = DialogResult.Abort;
+            }
         }
 
         private void btAgregar_Click(object sender, EventArgs e)

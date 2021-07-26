@@ -68,6 +68,10 @@ namespace Application.Models
             }
         }
 
+        /// <summary>
+        /// Elimina los informes del lacteo en la db
+        /// </summary>
+        /// <param name="informes"></param>
         public static void EliminarInformesDB(object informes)
         {
             Dictionary<string, int> inf = (Dictionary<string, int>)informes;
@@ -77,11 +81,6 @@ namespace Application.Models
                 Yogurth.MostrarMensajeEnPantalla.Invoke("Los informes del yogurth se eliminaron correctamente"); ;
             }
         }       
-
-        protected override void Envasar()
-        {
-            Yogurth.MostrarMensajeEnPantalla.Invoke("Finalizo la etapa de envasado del yogurth con el numero de informe :" + this.InformeEnvasado);
-        }
 
     }
 }

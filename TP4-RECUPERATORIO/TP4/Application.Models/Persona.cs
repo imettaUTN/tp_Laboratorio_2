@@ -1,9 +1,6 @@
 ﻿using Application.Models.DATOS;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Application.Models
 {
@@ -18,7 +15,7 @@ namespace Application.Models
         private bool esTecnico;
 
         public Persona() { }
-        public Persona(int legajo, int dni, string nombre, string apellido , string cargo, string genero,bool esTenico)
+        public Persona(int legajo, int dni, string nombre, string apellido, string cargo, string genero, bool esTenico)
         {
             this.Legajo = legajo;
             this.Dni = dni;
@@ -26,7 +23,7 @@ namespace Application.Models
             this.Apellido = apellido;
             this.Cargo = cargo;
             this.Genero = genero;
-            this.EsTecnico = EsTecnico;
+            this.EsTecnico = esTenico;
 
         }
 
@@ -66,20 +63,75 @@ namespace Application.Models
             set { this.genero = value; }
         }
 
-        public  bool Guardar()
+        /// <summary>
+        /// Guarda una persona en la db
+        /// </summary>
+        /// <returns></returns>
+        public bool Guardar()
         {
-            return PersonaDAO.Save(this);
+            bool result = false;
+            try
+            {
+                result = PersonaDAO.Save(this);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
         }
 
+        /// <summary>
+        /// Elimina una persona
+        /// </summary>
+        /// <returns></returns>
+        public bool Eliminar()
+        {
+            bool result = false;
+            try
+            {
+                result = PersonaDAO.Eliminar(this.Legajo);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Indica si existe un legajo en la base de datos
+        /// </summary>
+        /// <param name="legajo"></param>
+        /// <returns></returns>
         public static bool ExisteLegajo(int legajo)
         {
-            return PersonaDAO.ExistesLegajo(legajo);
+            bool result = false;
+            try
+            {
+                result = PersonaDAO.ExistesLegajo(legajo);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return result;
         }
 
+        /// <summary>
+        /// Lee las personas de la db
+        /// </summary>
+        /// <returns></returns>
         public static List<Persona> Leer()
         {
             return PersonaDAO.Read();
         }
+
+        /// <summary>
+        /// Lee una persona de la db segun su legajo
+        /// </summary>
+        /// <param name="legajo"></param>
+        /// <returns></returns>
         public static Persona LeerByLegajo(int legajo)
         {
             return PersonaDAO.ReadPersonaByLegajo(legajo);

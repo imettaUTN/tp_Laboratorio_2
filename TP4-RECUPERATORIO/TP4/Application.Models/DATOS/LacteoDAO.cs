@@ -6,6 +6,11 @@ namespace Application.Models.DATOS
 {
     public static class LacteoDAO
     {
+        /// <summary> TEMA DB/SQL
+        /// Busca un lacteo por el ID
+        /// </summary>
+        /// <param name="idLacteo"> id lacteo</param>
+        /// <returns> objeto del lacteo</returns>
         public static Lacteo ReadById(int idLacteo)
         {
             Lacteo lacteo = new Lacteo();
@@ -20,6 +25,11 @@ namespace Application.Models.DATOS
             return lacteo;
         }
 
+
+        /// <summary> TEMA DB/SQL
+        /// Busca todos los lacteos cargados en la db 
+        /// </summary>
+        /// <returns> lista de objeto del informe</returns>
         public static List<Lacteo> Read()
         {
             List<Lacteo> listaRetorno = new List<Lacteo>();
@@ -71,6 +81,11 @@ namespace Application.Models.DATOS
             return listaRetorno;
         }
 
+        /// <summary>
+        /// Guarda un lacteo en la base de datos
+        /// </summary>
+        /// <param name="lacteo">objeto lacteo</param>
+        /// <returns> id informe generado</returns>
         public static bool Save(Lacteo lacteo)
         {
             bool retorno = false;
@@ -157,6 +172,11 @@ namespace Application.Models.DATOS
             return retorno;
         }
 
+        /// <summary>
+        /// Actualizad un lacteo en la base de datos
+        /// </summary>
+        /// <param name="lacteo"> objeto lacteo a actualizar</param>
+        /// <returns></returns>
         public static bool Update(Lacteo lacteo)
         {
             bool retorno = false;
@@ -176,16 +196,13 @@ namespace Application.Models.DATOS
                     parameters.Add(new SqlParameter("@incubadoyMezclado", ((Yogurth)lacteo).IncubadoyMezclado));
                     parameters.Add(new SqlParameter("@IdInformeIncubadoYMezclado", ((Yogurth)lacteo).InformeIncubacionYMezcla));
                 }
-                else
-                {
-                    parameters.Add(new SqlParameter("@incubadoyMezclado", false));
-                    parameters.Add(new SqlParameter("@IdInformeIncubadoYMezclado", 0));
-                }
+
                 parameters.Add(new SqlParameter("@envasado", lacteo.Envasado));
                 parameters.Add(new SqlParameter("@IdInformeEnvasado", lacteo.InformeEnvasado));
                 parameters.Add(new SqlParameter("@IdLacteo", lacteo.IdLacteo));
 
-                retorno = DB.ExecuteNoQuery("UPDATE [dbo].[Lacteo]" +
+
+                string query = "UPDATE [dbo].[Lacteo]" +
                                             "SET[TipoProducto] = @TipoProducto, " +
                                             "[IdMateriaPrima] = @IdMateriaPrima, " +
                                             "[estandarizado] = @estandarizado, " +
@@ -194,12 +211,21 @@ namespace Application.Models.DATOS
                                             "[idInformeInoculacion] = @idInformeInoculacion, " +
                                             "[pasteurizado] = @pasteurizado, " +
                                             "[IdInformePasteurizacion] = @IdInformePasteurizacion, " +
-                                            "[incubadoyMezclado] = @incubadoyMezclado, " +
-                                            "[IdInformeIncubadoYMezclado] = @IdInformeIncubadoYMezclado, " +
-                                            "[envasado] = @envasado, " +
+                                           "[envasado] = @envasado, " +
                                             "[IdInformeEnvasado] = @IdInformeEnvasado, " +
-                                            "[fechaModificacion] = GETDATE()" +
-                                            " WHERE [IdLacteo] = @IdLacteo", parameters);
+                                            "[fechaModificacion] = GETDATE()";
+                if (lacteo.TipoProducto.Equals("Yogurth"))
+                {
+                    query += ",[incubadoyMezclado] = @incubadoyMezclado, " +
+                            "[IdInformeIncubadoYMezclado] = @IdInformeIncubadoYMezclado";
+                 }
+
+               query += " WHERE [IdLacteo] = @IdLacteo";
+ 
+
+
+
+                retorno = DB.ExecuteNoQuery(query, parameters);
                 if (lacteo.Aditivos.Count > 0)
                 {
                     AditivosDAO.DeleteAditivoLacteo(lacteo.IdLacteo);
@@ -219,6 +245,11 @@ namespace Application.Models.DATOS
             return retorno;
         }
 
+        /// <summary>
+        /// Borra un lacteo de la base de datos
+        /// </summary>
+        /// <param name="IdLacteo"> id lacteo a eliminar</param>
+        /// <returns> booleando incando si se elimino bien o no </returns>
         public static bool Delete(int IdLacteo)
         {
             bool retorno = false;
@@ -226,6 +257,7 @@ namespace Application.Models.DATOS
 
             try
             {
+                AditivosDAO.DeleteAditivoLacteo(IdLacteo);
                 parameters.Add(new SqlParameter("@IdLacteo", IdLacteo));
                 retorno = DB.ExecuteNoQuery("DELETE FROM [Lacteo] WHERE [IdLacteo] = @IdLacteo", parameters);
             }
@@ -236,6 +268,11 @@ namespace Application.Models.DATOS
             return retorno;
         }
 
+        /// <summary>
+        /// Borra todos los informes generados en la db 
+        /// </summary>
+        /// <param name="informes"> informes del lacteo </param>
+        /// <returns> booleando indicando si se eliminaron ok</returns>
         public static bool DeleteInformes(Dictionary<string, int> informes)
         {
             bool retorno = false;

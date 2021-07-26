@@ -65,6 +65,7 @@
             // 
             // cboTipo
             // 
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipo.FormattingEnabled = true;
             this.cboTipo.Items.AddRange(new object[] {
             "Espesante",
@@ -106,6 +107,7 @@
             // 
             // cboDescripcion
             // 
+            this.cboDescripcion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDescripcion.FormattingEnabled = true;
             this.cboDescripcion.Location = new System.Drawing.Point(108, 119);
             this.cboDescripcion.Name = "cboDescripcion";

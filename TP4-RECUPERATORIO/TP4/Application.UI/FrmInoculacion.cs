@@ -209,6 +209,12 @@ namespace Application.UI
                 sinErrores = false; return;
             }
 
+            if(this.aditivos.GetAll().Count <= 0)
+            {
+                MessageBox.Show("Debe incorpar aditivos", "Error en el proceso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                sinErrores = false; return;
+            }
+
             if (sinErrores)
             {
                 foreach (AditivoProducto aditivo in aditivos.GetAll())

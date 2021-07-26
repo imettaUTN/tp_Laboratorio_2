@@ -30,10 +30,11 @@ namespace Application.UI
                 btActualizar.Visible = false;
                 btEliminar.Visible = false;
             }
-            else if (operacion == this.operacion)
+            else if (operacion == Operaciones.MODIFICACION)
             {
                 btAgregarLacteo.Visible = false;
                 btEliminar.Visible = false;
+                btActualizar.Visible = true;
             }
             else
             {
@@ -107,6 +108,7 @@ namespace Application.UI
                 cboMateriaPrima.SelectedItem = selectedMateriaPrima;
             }
             IdInformes = new Dictionary<string, int>();
+            MostrarEtapasPorProducto();
             //Suscribo al evento de mostrar pantalla
             Leche.MostrarMensajeEnPantalla += MostrarMensajePantalla;
             Yogurth.MostrarMensajeEnPantalla += MostrarMensajePantalla;
@@ -201,8 +203,12 @@ namespace Application.UI
                 MessageBox.Show(dato.GetMensaje());
             }
         }
+        private void cboTipo_SelectedValueChanged(object sender, EventArgs e)
+        {
+            MostrarEtapasPorProducto();
+        }
 
-        private void cmbTipo_SelectedValueChanged(object sender, EventArgs e)
+        private void MostrarEtapasPorProducto()
         {
             this.tipoProducto = ((DisplayObject)cboTipo.SelectedValue).Name;
             lblIdInformeIncubarYMezclar.Visible = (this.tipoProducto == "Yogurth");
@@ -210,7 +216,6 @@ namespace Application.UI
             chkIncubadoMezclado.Visible = (this.tipoProducto == "Yogurth");
             lblInocularYBatir.Visible = (this.tipoProducto == "Yogurth");
         }
-
         private void btEstandarización_Click(object sender, EventArgs e)
         {
             if (cboTipo.SelectedItem is null)
@@ -559,5 +564,6 @@ namespace Application.UI
                 this.Close();
             }
         }
+    
     }
 }

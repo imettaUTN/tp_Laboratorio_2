@@ -1,103 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ArrayOfMateriaPrima xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <MateriaPrima>
-    <IdMateriaPrima>21</IdMateriaPrima>
-    <Descripcion>Materia prima 1</Descripcion>
+    <IdMateriaPrima>1</IdMateriaPrima>
+    <Descripcion>AAAA</Descripcion>
     <IdTanque>1</IdTanque>
     <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
     <IdTampo>1</IdTampo>
     <IndiceAcidez>1</IndiceAcidez>
-    <IdCertificado>2</IdCertificado>
-    <LegajoTecnicoHabilitante>12345</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>22</IdMateriaPrima>
-    <Descripcion>Materia prima 2</Descripcion>
-    <IdTanque>2</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>3</IdTampo>
-    <IndiceAcidez>2</IndiceAcidez>
-    <IdCertificado>55</IdCertificado>
-    <LegajoTecnicoHabilitante>456</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>23</IdMateriaPrima>
-    <Descripcion>Materia prima 3</Descripcion>
-    <IdTanque>3</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>4</IdTampo>
-    <IndiceAcidez>3</IndiceAcidez>
-    <IdCertificado>568</IdCertificado>
-    <LegajoTecnicoHabilitante>4556</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>24</IdMateriaPrima>
-    <Descripcion>Materia prima 5</Descripcion>
-    <IdTanque>1</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>4</IdTampo>
-    <IndiceAcidez>1</IndiceAcidez>
-    <IdCertificado>726643700</IdCertificado>
-    <LegajoTecnicoHabilitante>2</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>25</IdMateriaPrima>
-    <Descripcion>Materia prima 1</Descripcion>
-    <IdTanque>1</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>1</IdTampo>
-    <IndiceAcidez>1</IndiceAcidez>
-    <IdCertificado>2</IdCertificado>
-    <LegajoTecnicoHabilitante>12345</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>26</IdMateriaPrima>
-    <Descripcion>Materia prima 2</Descripcion>
-    <IdTanque>2</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>3</IdTampo>
-    <IndiceAcidez>2</IndiceAcidez>
-    <IdCertificado>55</IdCertificado>
-    <LegajoTecnicoHabilitante>456</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>27</IdMateriaPrima>
-    <Descripcion>Materia prima 3</Descripcion>
-    <IdTanque>3</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>4</IdTampo>
-    <IndiceAcidez>3</IndiceAcidez>
-    <IdCertificado>568</IdCertificado>
-    <LegajoTecnicoHabilitante>4556</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>28</IdMateriaPrima>
-    <Descripcion>sss</Descripcion>
-    <IdTanque>1</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>1</IdTampo>
-    <IndiceAcidez>1</IndiceAcidez>
-    <IdCertificado>2014542474</IdCertificado>
-    <LegajoTecnicoHabilitante>1</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>29</IdMateriaPrima>
-    <Descripcion>555555</Descripcion>
-    <IdTanque>4</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>3</IdTampo>
-    <IndiceAcidez>55</IndiceAcidez>
-    <IdCertificado>1445468166</IdCertificado>
-    <LegajoTecnicoHabilitante>2222</LegajoTecnicoHabilitante>
-  </MateriaPrima>
-  <MateriaPrima>
-    <IdMateriaPrima>30</IdMateriaPrima>
-    <Descripcion>testt</Descripcion>
-    <IdTanque>1</IdTanque>
-    <HabilitadoParaFabrica>true</HabilitadoParaFabrica>
-    <IdTampo>2</IdTampo>
-    <IndiceAcidez>1</IndiceAcidez>
-    <IdCertificado>400342244</IdCertificado>
-    <LegajoTecnicoHabilitante>22255587</LegajoTecnicoHabilitante>
+    <IdCertificado>1425926072</IdCertificado>
+    <LegajoTecnicoHabilitante>1258993</LegajoTecnicoHabilitante>
   </MateriaPrima>
 </ArrayOfMateriaPrima>

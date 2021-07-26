@@ -17,8 +17,6 @@ namespace Application.Models
         private double cantidad;
         private string descripcion;
         private string tipo;
-        //private Thread hiloBaseDeDatos;
-//public static event MostrarMensaje MostrarMensajeEnPantalla;
 
         public AditivoProducto() { }
         public AditivoProducto(double cantidad, string descripcion , string tipo, int id)
@@ -73,10 +71,21 @@ namespace Application.Models
             }
         }
 
+        /// <summary>
+        /// Lee los aditivos de la base de datos
+        /// </summary>
+        /// <param name="id">id del aditivo a buscar</param>
+        /// <returns></returns>
         public static List<AditivoProducto> LeerAditivosLacteo(int id)
         {
             return AditivosDAO.LeerAditivosLacteos(id);
         }
+
+        /// <summary>
+        /// Guarda un aditivo en la db
+        /// </summary>
+        /// <param name="aditivos"></param>
+        /// <returns></returns>
         public static bool Guardar(List<AditivoProducto> aditivos)
         {
             try

@@ -8,3 +8,8 @@ C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.File\bin\Debu
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.File\obj\Debug\Application.File.csproj.CoreCompileInputs.cache
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.File\obj\Debug\Application.File.dll
 C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4\Application.File\obj\Debug\Application.File.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.File\bin\Debug\Application.File.dll
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.File\bin\Debug\Application.File.pdb
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.File\obj\Debug\Application.File.csproj.CoreCompileInputs.cache
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.File\obj\Debug\Application.File.dll
+C:\Programacion2\tp_Laboratorio_2\tp_Laboratorio_2\TP4-RECUPERATORIO\TP4\Application.File\obj\Debug\Application.File.pdb

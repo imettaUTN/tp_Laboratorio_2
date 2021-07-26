@@ -43,9 +43,9 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.personalToolStripMenuItem,
             this.materiaPrimaToolStripMenuItem,
-            this.productosToolStripMenuItem,
-            this.personalToolStripMenuItem});
+            this.productosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(844, 24);
@@ -86,7 +86,7 @@
             // cargarProductoToolStripMenuItem
             // 
             this.cargarProductoToolStripMenuItem.Name = "cargarProductoToolStripMenuItem";
-            this.cargarProductoToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.cargarProductoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cargarProductoToolStripMenuItem.Text = "Productos";
             this.cargarProductoToolStripMenuItem.Click += new System.EventHandler(this.cargarProductoToolStripMenuItem_Click);
             // 

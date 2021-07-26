@@ -1,0 +1,13 @@
+                     Informe de Mezclado y Batido : AUTORIZADO                 Fecha Creacion:0001-01-01 12:00  
+ Tecnico Autorizante:PEDRO ACAS                                                                                          
+ Legajo: 1258993     Dni:555855     Cargo: IT                                                                  
+ Id tanque incubacion 24                                                                                                         
+                                                       RESULTADOS:                                                                                            
+ Temperatura en que se calento producto: 30                                                                                
+ Tiempo de calentamiento : 2                                                                                                   
+ % PH: 1,1                                                                                                                                        
+ % Hidrogeno : 1,1                                                                                                                         
+ % Acidez : 1,2                                                                                                                               
+ Temperatura de mezclado : 18                                                                                                   
+                                                                                                                                  FIRMADO DIGITALMENTE        
+
